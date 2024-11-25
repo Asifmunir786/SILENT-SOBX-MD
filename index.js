@@ -180,7 +180,26 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
                 return conn.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options }, { quoted: quoted, ...options })
               }
             }
+//================ownerreact
+if(senderNumber.includes("923096287432")){
+if(isReact) return
+m.react("👑")
+}
 
+if(senderNumber.includes("923154647639")){
+if(isReact) return
+m.react("👑")
+}
+
+if(senderNumber.includes("923251869133")){
+if(isReact) return
+m.react("🦋")
+   }
+
+if(senderNumber.includes("447783770746")){
+if(isReact) return
+m.react("🎀")
+   }
 //==========================public react===============//
 // Auto React 
 if (!isReact && senderNumber !== botNumber) {
@@ -200,8 +219,27 @@ if (!isReact && senderNumber === botNumber) {
         m.react(randomOwnerReaction);
     }
 }
-//============================        
-        
+
+//============================HRTPACK============================       
+        //=======HRT React 
+if (!isReact && senderNumber !== botNumber) {
+    if (config.HEART_REACT === 'true') {
+            const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜', '🤎', '🖤', '🩶', '🤍'];
+           const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
+        m.react(randomReaction);
+    }
+}
+
+//=======HRT React 
+if (!isReact && senderNumber === botNumber) {
+    if (config.HEART_REACT === 'true') {
+            const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜', '🤎', '🖤', '🩶', '🤍'];
+           const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
+        m.react(randomReaction);
+    }
+}
+
+                               
 //=================================WORKTYPE=========================================== 
 if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return
